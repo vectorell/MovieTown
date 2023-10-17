@@ -37,7 +37,7 @@ export function getLanguageNames(max) {
 }
 
 
-// Hämta ut hur många filmer per språk det finns
+// Hämta ut hur många filmer per (valfritt) det finns
 export function numberOfMoviesPerLanguage(max) {
     let results = [];
 
@@ -50,6 +50,41 @@ export function numberOfMoviesPerLanguage(max) {
     let pickedResults = sortedResults.slice(0, max);
     return pickedResults;
 }
+
+
+
+
+
+// Hämta ut hur många filmer per premiär det finns
+export function numberOfMoviesPerPremiere() {
+    let movieArray = [];
+    
+    allMovies().forEach(movie => {
+        !movieArray.includes(movie.Premiere.split(' ')[0]) &&
+        movieArray.push(movie.Premiere.split(' ')[0]);
+    });
+    
+    console.log('movieArray: ', movieArray);
+
+
+
+
+    let results = []
+    movieArray.forEach((premiere) => {
+
+        let filtered = allMovies().filter((movie) => (movie.Premiere.split(' ')[0] == premiere.split(' ')[0]))
+
+        results.push(filtered.length);
+    });
+
+    console.log('results: ', results)
+    return {results, movieArray}
+}
+
+
+
+
+
 
 // Skapa färger till alla språk
 export function assignLanguageColor(numberOfLanguages) {

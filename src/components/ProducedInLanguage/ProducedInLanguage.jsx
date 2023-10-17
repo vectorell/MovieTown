@@ -22,7 +22,7 @@ export default function ProducedInLanguage() {
     }
 
     function setCountDecrease() {
-      !(selectedLanguages == 1) && 
+      !(selectedLanguages == 2) && 
         setSelectedLanguages(selectedLanguages - 1 )
     }
 
