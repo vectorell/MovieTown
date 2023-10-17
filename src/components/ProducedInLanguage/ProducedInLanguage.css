@@ -1,0 +1,21 @@
+.ProducedInLanguage {
+    border: 1px dashed grey;
+    padding: 1em;
+}
+
+.ProducedInLanguage button {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.2em;
+    margin: 1em;
+    background-color: rgb(199, 143, 64);
+    font-weight: 600;
+    transition: all 0.15s;
+
+    &:hover {
+        transform: scale(105%);
+    }
+    &:active {
+        transform: scale(95%);
+    }
+}

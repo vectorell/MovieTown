@@ -1,0 +1,22 @@
+[
+	{
+		"type": "vanilla",
+		"popularity": 9001
+	},
+	{
+		"type": "chocolate",
+		"popularity": 8720
+	},
+	{
+		"type": "cherry",
+		"popularity": 1234
+	},
+	{
+		"type": "nougat",
+		"popularity": 4444
+	},
+	{
+		"type": "pear",
+		"popularity": 6010
+	}
+]

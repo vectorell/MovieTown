@@ -8,7 +8,6 @@ export function logData() {
 }
 
 export function allMovies() {
-
     const genres = [documentaries, featureFilms, specials];
     let allMovies = [];
 
@@ -22,23 +21,45 @@ export function allMovies() {
         allMovies.push(special)
     });
 
-    console.log('allGenres: ', allMovies)
-    console.log('specifik: ', allMovies[2].Language)
-
     return allMovies
 }
 
 
-// Returnerar antal filmer för ett språk
-export function producedInLanguage( lang ) {
-    let movies = []
+// Hämta och för in språknamnen i en array
+export function getLanguageNames(max) {
+    let langArray = [];
 
-    // Normalisera språkinput
-    let language = (lang.toLowerCase())
-    language = language.charAt(0).toUpperCase() + language.slice(1)
-
-    allMovies().forEach(movie => {
-        movie.Language === lang && movies.push(movie)
-    })
-    return movies
+    allMovies().forEach((movie) => {
+        !langArray.includes(movie.Language) &&
+            langArray.push(movie.Language);
+    });
+    return langArray.slice(0, max);
 }
+
+
+// Hämta ut hur många filmer per språk det finns
+export function numberOfMoviesPerLanguage(max) {
+    let results = [];
+
+    getLanguageNames().forEach((language) => {
+        let filtered = allMovies().filter((movie) => movie.Language === language);
+        results.push(filtered.length);
+    });
+
+    let sortedResults = results.sort((a, b) => b - a);
+    let pickedResults = sortedResults.slice(0, max);
+    return pickedResults;
+}
+
+// Skapa färger till alla språk
+export function assignLanguageColor(numberOfLanguages) {
+    let colorArray = [];
+    getLanguageNames().forEach((language) => {
+        colorArray.push(`rgba(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`);
+    });
+    return colorArray;
+}
+
+export const randomNumber = () => {
+    return Math.floor(Math.random() * (255 - 0 + 1) + 1);
+};
