@@ -2,13 +2,15 @@ import { allMovies, convertRuntimeToMinutes } from "../../utils.js"
 
 export default function getLineConfig() {
 
+    // TODO: Granska
+
     let eachRuntime = []
 
     // Skapar en array med alla olika visningslängder
     allMovies().forEach(movie => {
         eachRuntime.push(convertRuntimeToMinutes(movie.Runtime))
     })
-    console.log('eachRuntime: ', eachRuntime)
+    // console.log('eachRuntime: ', eachRuntime)
 
 
     // Räkna antalet filmer per visningslängd
@@ -16,19 +18,19 @@ export default function getLineConfig() {
     eachRuntime.forEach(runtime => {
         (runtimeCounts[runtime] = (runtimeCounts[runtime] || 0) + 1)
     })
-    console.log('runtimeCounts: ', runtimeCounts)
+    // console.log('runtimeCounts: ', runtimeCounts)
 
     // Skapa en array med unika visningslängder
     const uniqueRuntimes = Array.from(new Set(eachRuntime)).sort((a,b) => a - b)
-    console.log('uniqueRuntimes: ',uniqueRuntimes)
+    // console.log('uniqueRuntimes: ',uniqueRuntimes)
 
 
     // Skapa en array för antalet filmer per visningslängd
     let movieCounts = uniqueRuntimes.map(runtime => runtimeCounts[runtime])
-    console.log(movieCounts)
+    // console.log('movieCounts: ', movieCounts)
 
     return {
-        labels: uniqueRuntimes,
+        labels: [],
         datasets: [{
             data: runtimeCounts,
             label: 'Number of movies',
