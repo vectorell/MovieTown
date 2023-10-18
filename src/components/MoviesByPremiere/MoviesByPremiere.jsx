@@ -19,7 +19,7 @@ export default function MoviesByPremiere() {
 
     return (
         <div className="MoviesByPremiere">
-            <h1>Movies by Premiere</h1>
+            <h1>Number of movies by Premiere date</h1>
             <Bar data={barConfig}/>
         </div>
     )

@@ -20,7 +20,7 @@ export default function MoviesByLength() {
 
     return (
         <div className="MoviesByLength">
-            <h1> Movies by length </h1>
+            <h1> Number of movies by length </h1>
             < Line data={lineConfig}/>
         </div>
     )
