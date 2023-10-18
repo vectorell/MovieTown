@@ -1,6 +1,7 @@
 import ProducedInLanguage from "./components/ProducedInLanguage/ProducedInLanguage.jsx";
 import MoviesByPremiere from "./components/MoviesByPremiere/MoviesByPremiere.jsx";
 import "./App.css";
+import MoviesByLength from "./components/MoviesByLength/MoviesByLength.jsx";
 
 
 
@@ -14,8 +15,9 @@ function App() {
 
           <h1> MovieTown </h1>
 
-          {/* <ProducedInLanguage /> */}
+          <ProducedInLanguage />
           <MoviesByPremiere />
+          <MoviesByLength />
 
         </div>
     );

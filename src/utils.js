@@ -7,6 +7,7 @@ export function logData() {
     console.log(documentaries[1]);
 }
 
+// TODO: Simplifiera
 export function allMovies() {
     const genres = [documentaries, featureFilms, specials];
     let allMovies = [];
@@ -37,7 +38,7 @@ export function getLanguageNames(max) {
 }
 
 
-// Hämta ut hur många filmer per (valfritt) det finns
+// Hämta ut hur många filmer per språk det finns
 export function numberOfMoviesPerLanguage(max) {
     let results = [];
 
@@ -52,24 +53,16 @@ export function numberOfMoviesPerLanguage(max) {
 }
 
 
-
-
-
 // Hämta ut hur många filmer per premiär det finns
 export function numberOfMoviesPerPremiere() {
     let movieArray = [];
+    let results = []
     
     allMovies().forEach(movie => {
         !movieArray.includes(movie.Premiere.split(' ')[0]) &&
         movieArray.push(movie.Premiere.split(' ')[0]);
     });
-    
-    console.log('movieArray: ', movieArray);
 
-
-
-
-    let results = []
     movieArray.forEach((premiere) => {
 
         let filtered = allMovies().filter((movie) => (movie.Premiere.split(' ')[0] == premiere.split(' ')[0]))
@@ -77,24 +70,42 @@ export function numberOfMoviesPerPremiere() {
         results.push(filtered.length);
     });
 
-    console.log('results: ', results)
     return {results, movieArray}
 }
 
 
+export const randomNumber = () => {
+    return Math.floor(Math.random() * (255 - 0 + 1) + 1);
+};
 
 
-
-
-// Skapa färger till alla språk
-export function assignLanguageColor(numberOfLanguages) {
+// Skapa färger till datapunkter
+export function assignColor(type) {
     let colorArray = [];
-    getLanguageNames().forEach((language) => {
+    type.forEach((item) => {
         colorArray.push(`rgba(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`);
     });
     return colorArray;
 }
 
-export const randomNumber = () => {
-    return Math.floor(Math.random() * (255 - 0 + 1) + 1);
-};
+
+// Räkna ut en films tid i minuter
+export function convertRuntimeToMinutes(runtime) {
+    if (!runtime) return
+
+    let splittedRuntime = runtime.split(' ')
+
+    if (splittedRuntime.length == 2) {
+
+        if (splittedRuntime[1] === 'h') {
+            return Number(splittedRuntime[0]) * 60
+        } else {
+            return Number(splittedRuntime[0])
+        }
+
+    } else {
+        const hoursToMinutes = Number(splittedRuntime[0] * 60)
+        const minutes = Number(splittedRuntime[2])
+        return hoursToMinutes + minutes
+    }
+}
