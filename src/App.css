@@ -2,7 +2,18 @@
     text-align: center;
     width: 100vw;
 }
-
+/* 
 .App > div {
     margin: 2em;
+} */
+
+.container {
+
+    width: fit-content;
+    padding: 0.5em 1em;
+    /* height: 1em; */
+    background: #111;
+    border-radius: 0.2em;
+    margin: 1em;
+
 }
