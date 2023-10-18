@@ -3,6 +3,7 @@ import MoviesByPremiere from "./components/MoviesByPremiere/MoviesByPremiere.jsx
 import "./App.css";
 import MoviesByLength from "./components/MoviesByLength/MoviesByLength.jsx";
 import MoviesByGenre from "./components/MoviesByGenre/MoviesByGenre.jsx";
+import Search from "./components/Seach/Search.jsx";
 
 
 
@@ -19,7 +20,8 @@ function App() {
           {/* <ProducedInLanguage /> */}
           {/* <MoviesByPremiere /> */}
           {/* <MoviesByLength /> */}
-          <MoviesByGenre />
+          {/* <MoviesByGenre /> */}
+          <Search />
 
         </div>
     );

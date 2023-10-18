@@ -1,0 +1,12 @@
+.Search {
+    border-top: 1px dashed grey;
+    padding: 1em;
+}
+
+.Search .detailed-view {
+    border: 1px dashed grey;
+    margin: 1em;
+}
+.Search .detailed-view > * {
+    padding: 0.5em;
+}
