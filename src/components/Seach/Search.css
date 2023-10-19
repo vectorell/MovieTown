@@ -1,11 +1,25 @@
 .Search {
-    border-top: 1px dashed grey;
+    /* border-top: 1px dashed grey; */
     padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.search-results {
+    margin: 0.5em;
 }
 
 .Search .detailed-view {
-    border: 1px dashed grey;
+    box-shadow: 1px 6px 10px 2px black;
     margin: 1em;
+    background: linear-gradient(rgb(243, 194, 87), rgb(125, 75, 10)) ;
+    color: rgb(0, 0, 0);
+    min-height: fit-content;
+    width: fit-content
 }
 .Search .detailed-view > * {
     padding: 0.5em;

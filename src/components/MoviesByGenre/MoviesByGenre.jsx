@@ -10,5 +10,23 @@ import { getPieConfig } from '../../data/configs/moviesByGenre';
 const pieConfig = getPieConfig()
 
 export default function MoviesByGenre() {
-    return <Bar data={pieConfig}/>
+
+    const options = {
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Genres'
+                }
+            },
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Number of movies'
+                }
+            }
+        }
+    }
+    return <Bar data={pieConfig} options={options}/>
 }

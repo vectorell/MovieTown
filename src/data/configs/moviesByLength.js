@@ -35,6 +35,7 @@ export default function getLineConfig() {
             data: runtimeCounts,
             label: 'Number of movies',
             borderColor: "rgb(199, 143, 64)",
+            // pointRadius: 0.5,
             backgroundColor: "rgba(75,192,192,0)"
         }]
     }

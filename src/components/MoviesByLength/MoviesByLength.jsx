@@ -16,5 +16,24 @@ const lineConfig = getLineConfig()
 
 
 export default function MoviesByLength() {
-    return <Line data={lineConfig}/>
+
+    const options = {
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Minutes'
+                }
+            },
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Number of movies'
+                }
+            }
+        }
+    }
+
+    return <Line data={lineConfig} options={options}/>
 }

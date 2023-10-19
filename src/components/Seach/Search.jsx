@@ -1,6 +1,7 @@
 import "./Search.css";
 import { allMovies } from "../../utils.js";
 import { useState, useRef } from "react";
+import { motion } from 'framer-motion'
 
 export default function Search() {
     const [searchResults, setSearchResults] = useState([]);
@@ -27,30 +28,37 @@ export default function Search() {
     return (
         <div className="Search">
             <div>
+                <p> ({ searchResults.length } results) </p>
                 <input type="text" ref={inputRef} onChange={handleChange} />
-                <button> Search </button>
             </div>
-
-
 
                 {(searchResults.length > 1) ? 
                     searchResults.map( (result, index) => (
-                        <div key={index}>
+                        <motion.div 
+                        key={index} 
+                        className="search-results"
+                            // initial={{ scale: 0 }}
+                            // animate={{ scale: 1 }}
+                            >
                             <p> {result.Title} </p>
-                        </div>
+                        </motion.div>
                 )) : (
                     searchResults.map( (result, index) => (
-                        <div key={index} className="detailed-view">
-                            <h1> Detailed information </h1>
-                            <h2> {result.Title} </h2>
+                        <motion.div 
+                        key={index} 
+                        className="detailed-view"
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        >
+                            <h1> {result.Title} </h1>
+                            <h2> Premiere: {result.Premiere} </h2>
                             <h3> Genre: {result.Genre ? result.Genre : 'Documentary'} </h3>
                             <p> Runtime: {result.Runtime} </p>
                             <p> Language: {result.Language} </p>
-                            <h4> Premiere: {result.Premiere} </h4>
-                        </div>
+                        </motion.div>
                     ))
 
-                )}
+                ) }
 
 
         </div>

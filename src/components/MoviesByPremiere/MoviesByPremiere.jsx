@@ -16,5 +16,23 @@ const barConfig = getConfig()
 
 
 export default function MoviesByPremiere() {
-    return <Bar data={barConfig}/>
+
+    const options = {
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Months'
+                }
+            },
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Number of movies'
+                }
+            }
+        }
+    }
+    return <Bar data={barConfig} options={options}/>
 }
