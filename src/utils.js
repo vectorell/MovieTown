@@ -54,24 +54,79 @@ export function numberOfMoviesPerLanguage(max) {
 
 
 // Hämta ut hur många filmer per premiär det finns
-export function numberOfMoviesPerPremiere() {
-    let movieArray = [];
-    let results = []
+// export function numberOfMoviesPerPremiere() {
+//     let movieArray = [];
+//     let results = []
     
-    allMovies().forEach(movie => {
-        !movieArray.includes(movie.Premiere.split(' ')[0]) &&
-        movieArray.push(movie.Premiere.split(' ')[0]);
-    });
+//     allMovies().forEach(movie => {
+//         !movieArray.includes(movie.Premiere.split(' ')[0]) &&
+//         movieArray.push(movie.Premiere.split(' ')[0]);
+//     });
 
-    movieArray.forEach((premiere) => {
+//     movieArray.forEach((premiere) => {
 
-        let filtered = allMovies().filter((movie) => (movie.Premiere.split(' ')[0] == premiere.split(' ')[0]))
+//         let filtered = allMovies().filter((movie) => (movie.Premiere.split(' ')[0] == premiere.split(' ')[0]))
 
-        results.push(filtered.length);
-    });
+//         results.push(filtered.length);
+//     });
 
-    return {results, movieArray}
+//     return {results, movieArray}
+// }
+
+
+
+
+
+// Hämta ut hur många filmer per premiär det finns
+export function numberOfMoviesPerPremiere() {
+
+    // TODO: Refaktorera. Få väck hårdkodning
+
+    const categories = [documentaries, specials, featureFilms]
+    let perCategory = []
+    let months = []
+    let categoryName = []
+    
+    for (let i = 0; i < categories.length; i++) {
+        categoryName = categories
+        let results = []
+
+        categories[i].forEach(movie => {
+            !months.includes(movie.Premiere.split(' ')[0]) &&
+            months.push(movie.Premiere.split(' ')[0]);
+        })
+
+        months.forEach((premiere) => {
+            let filtered = categories[i].filter((movie) => (movie.Premiere.split(' ')[0] == premiere.split(' ')[0]))
+            results.push(filtered.length);
+        });
+        
+        perCategory.push(results)
+    }
+
+    return {perCategory, months, categoryName}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 export const randomNumber = () => {

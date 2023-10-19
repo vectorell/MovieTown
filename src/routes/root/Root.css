@@ -1,0 +1,16 @@
+.Root {
+    max-height: 100vh;
+    text-align: center;
+}
+
+.router-nav {
+    display: flex;
+    justify-content: space-evenly;
+
+    & a {
+        text-decoration: none;
+        color: #FFF;
+        border: 1px solid #FFF;
+        padding: 0.5em 1em;
+    }
+}

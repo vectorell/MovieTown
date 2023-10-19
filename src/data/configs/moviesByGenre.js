@@ -17,7 +17,7 @@ export function getPieConfig() {
 
     // Skapa en array med unika genres
     let uniqueGenres = Array.from(new Set(genres));
-    console.log(uniqueGenres.length);
+    // console.log(uniqueGenres.length);
 
     // Skapa en array för antalet filmer per visningslängd
     let movieCounts = uniqueGenres

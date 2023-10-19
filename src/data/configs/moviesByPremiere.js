@@ -2,16 +2,33 @@ import { allMovies, numberOfMoviesPerPremiere, assignColor } from "../../utils"
 
 
 export function getConfig() {
-    
 
-    // TODO: a. [VG] Skilj mellan kategorier så att man kan se hur många documentaries, features och specials som släpptes under respektive månad. (Tre staplar per månad.)
+    // TODO: Refaktorera. Få väck hårdkodning
+
+    const data = numberOfMoviesPerPremiere()
+    // console.log('data: ', data)
+
+    // TODO: Lägg till bättre färger i backgroundColor...
     
     return {
-        labels: numberOfMoviesPerPremiere().movieArray,
-        datasets: [{
-            data: numberOfMoviesPerPremiere().results,
-            label: 'Number of movies on premiere',
-            backgroundColor: assignColor(numberOfMoviesPerPremiere().movieArray)
-        }]
+        labels: numberOfMoviesPerPremiere().months,
+        datasets: [
+            {
+                data: numberOfMoviesPerPremiere().perCategory[0], 
+                label: 'Documentaries',
+                backgroundColor: 'red'
+            },
+            {
+                data: numberOfMoviesPerPremiere().perCategory[1], 
+                label: 'Specials',
+                backgroundColor: 'blue'
+            },
+            {
+                data: numberOfMoviesPerPremiere().perCategory[2], 
+                label: 'Feature films',
+                backgroundColor: 'green'
+            },
+        
+        ],
     }
 }
