@@ -11,12 +11,18 @@
     & a {
         text-decoration: none;
         color: #FFF;
-        border: 1px solid #FFF;
-        padding: 0.5em 1em;
+        /* border: 1px solid #FFF; */
     }
 }
 
 .router-nav > *.active {
     background-color: #fff;
     color: #000;
+}
+
+.router-nav > p {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    padding: 0.5em 1em;
 }

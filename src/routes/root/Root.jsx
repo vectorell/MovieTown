@@ -7,7 +7,7 @@ import RouteMoviesBySearchString from '../RouteMoviesBySearchString/RouteMoviesB
 import RouteMoviesProducedInLanguage from '../RouteMoviesProducedInLanguage/RouteMoviesProducedInLanguage.jsx'
 import { useState } from "react"
 import { motion } from 'framer-motion'
-import FramerNavLink from "../../components/framerMotion/FramerNavLink"
+import FramerLinkP from "../../components/framerMotion/FramerLinkP.jsx"
 
 export default function Root() {
     const [pageIndex, setPageIndex] = useState(0)
@@ -24,12 +24,26 @@ export default function Root() {
         <div className="Root">
             <header>  
                 <nav className="router-nav">
-                    {/* <FramerNavLink to="movies-by-genre" text={"Movies by genre"} /> */}
-                    <NavLink to="movies-by-genre"> Movies by genre </NavLink>
-                    <NavLink to="movies-by-length"> Movies by length </NavLink>
-                    <NavLink to="movies-by-premiere"> Movies by premiere </NavLink>
-                    <NavLink to="movies-by-produced-in-language"> Number of movies produced per language </NavLink>
-                    <NavLink to="movies-by-search-string"> Search movies </NavLink>
+
+                    <NavLink to="movies-by-genre"> 
+                        <FramerLinkP text={"Movies by genre"} />
+                    </NavLink>
+
+                    <NavLink to="movies-by-length"> 
+                        <FramerLinkP text={"Movies by length"} />
+                    </NavLink>
+
+                    <NavLink to="movies-by-premiere"> 
+                        <FramerLinkP text={"Movies by premiere"} />
+                    </NavLink>
+
+                    <NavLink to="movies-by-produced-in-language"> 
+                        <FramerLinkP text={"Number of movies produced per language"} />
+                    </NavLink>
+
+                    <NavLink to="movies-by-search-string"> 
+                        <FramerLinkP text={"Search movies"} />
+                    </NavLink>
                 </nav>
 
             </header>
