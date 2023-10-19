@@ -6,6 +6,8 @@ import RouteMoviesByLength from '../RouteMoviesByLength/RouteMoviesByLength.jsx'
 import RouteMoviesBySearchString from '../RouteMoviesBySearchString/RouteMoviesBySearchString.jsx'
 import RouteMoviesProducedInLanguage from '../RouteMoviesProducedInLanguage/RouteMoviesProducedInLanguage.jsx'
 import { useState } from "react"
+import { motion } from 'framer-motion'
+import FramerNavLink from "../../components/framerMotion/FramerNavLink"
 
 export default function Root() {
     const [pageIndex, setPageIndex] = useState(0)
@@ -18,16 +20,11 @@ export default function Root() {
         <RouteMoviesByPremiere />
     ]
 
-    function handleClick(operator) {
-        operator === 'plus' && setPageIndex(pageIndex + 1)
-        operator === 'minus' && setPageIndex(pageIndex - 1)       
-        console.log(pageIndex)
-    }
-
     return (
         <div className="Root">
             <header>  
                 <nav className="router-nav">
+                    {/* <FramerNavLink to="movies-by-genre" text={"Movies by genre"} /> */}
                     <NavLink to="movies-by-genre"> Movies by genre </NavLink>
                     <NavLink to="movies-by-length"> Movies by length </NavLink>
                     <NavLink to="movies-by-premiere"> Movies by premiere </NavLink>
@@ -42,8 +39,6 @@ export default function Root() {
             <main>
                 <Outlet />
                 {/* <RouteMoviesByPremiere /> */}
-                <button onClick={() => handleClick('minus')}> Backwards </button>
-                <button onClick={() => handleClick('plus')}> Forwards </button>
             </main>
         </div>
 
