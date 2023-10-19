@@ -26,7 +26,6 @@ export default function Search() {
 
     return (
         <div className="Search">
-            <h1> Search </h1>
             <div>
                 <input type="text" ref={inputRef} onChange={handleChange} />
                 <button> Search </button>

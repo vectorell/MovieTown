@@ -10,11 +10,5 @@ import { getPieConfig } from '../../data/configs/moviesByGenre';
 const pieConfig = getPieConfig()
 
 export default function MoviesByGenre() {
-
-    return (
-        <div className="MoviesByGenre">
-            <h1> Movies by genre </h1>
-            <Bar data={pieConfig}/>
-        </div>
-    )
+    return <Bar data={pieConfig}/>
 }

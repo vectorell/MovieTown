@@ -42,10 +42,10 @@ function App() {
           > Show amount of movies per language </motion.div>
 
           {showProducedInLanguage && <ProducedInLanguage />}
-          {/* <MoviesByPremiere /> */}
-          {/* <MoviesByLength /> */}
-          {/* <MoviesByGenre /> */}
-          {/* <Search /> */}
+          <MoviesByPremiere />
+          <MoviesByLength />
+          <MoviesByGenre />
+          <Search />
 
         </div>
     );

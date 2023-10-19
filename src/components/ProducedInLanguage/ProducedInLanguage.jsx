@@ -28,10 +28,8 @@ export default function ProducedInLanguage() {
 
     return (
         <div className="ProducedInLanguage">
-            <h2> Movies from all genres per language (showing top {selectedLanguages}): </h2>
-
+           <h2>(showing top {selectedLanguages}): </h2>
             <Pie data={pieConfig} />
-
             <button
                 onClick={() => setCountDecrease()}
                     >
@@ -44,7 +42,6 @@ export default function ProducedInLanguage() {
                     {" "}
                     More languages{" "}
                 </button>
-            
         </div>
     )
 }

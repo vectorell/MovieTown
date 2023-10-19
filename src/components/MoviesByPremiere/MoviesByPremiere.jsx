@@ -16,11 +16,5 @@ const barConfig = getConfig()
 
 
 export default function MoviesByPremiere() {
-
-    return (
-        <div className="MoviesByPremiere">
-            <h1>Number of movies by Premiere date</h1>
-            <Bar data={barConfig}/>
-        </div>
-    )
+    return <Bar data={barConfig}/>
 }

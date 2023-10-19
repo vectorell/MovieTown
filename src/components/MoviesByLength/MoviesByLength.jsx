@@ -16,12 +16,5 @@ const lineConfig = getLineConfig()
 
 
 export default function MoviesByLength() {
-
-
-    return (
-        <div className="MoviesByLength">
-            <h1> Number of movies by length </h1>
-            < Line data={lineConfig}/>
-        </div>
-    )
+    return <Line data={lineConfig}/>
 }
