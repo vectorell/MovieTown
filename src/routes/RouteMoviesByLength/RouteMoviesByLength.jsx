@@ -1,11 +1,13 @@
 import MoviesByLength from "../../components/MoviesByLength/MoviesByLength"
+import FramerPageTitle from "../../components/framerMotion/FramerPageTitle";
+import FramerRoute from "../../components/framerMotion/FramerRoute.jsx";
+
 export default function RouteMoviesByLength() {
-
-
     return (
-        <div className="RouteMoviesByLength">
-            <h1> Number of movies by length </h1>
-            <MoviesByLength />
-        </div>
+        <FramerRoute 
+            name={"RouteMoviesByLength"}
+            title={<FramerPageTitle title={"Number of movies by length"} />}
+            component={<MoviesByLength />}
+        />
     )
 }

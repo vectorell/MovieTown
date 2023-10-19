@@ -1,5 +1,5 @@
 import './ProducedInLanguage.css'
-
+import { motion } from 'framer-motion'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 ChartJS.register(ArcElement, Tooltip, Legend)
 import { Pie } from 'react-chartjs-2';
@@ -27,7 +27,9 @@ export default function ProducedInLanguage() {
     }
 
     return (
-        <div className="ProducedInLanguage">
+        <motion.div 
+        className="ProducedInLanguage"
+        >
            <h2>(showing top {selectedLanguages}): </h2>
             <Pie data={pieConfig} />
             <button
@@ -42,6 +44,6 @@ export default function ProducedInLanguage() {
                     {" "}
                     More languages{" "}
                 </button>
-        </div>
+        </motion.div>
     )
 }

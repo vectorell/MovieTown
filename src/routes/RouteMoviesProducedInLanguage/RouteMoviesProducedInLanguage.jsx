@@ -1,11 +1,14 @@
 import ProducedInLanguage from "../../components/ProducedInLanguage/ProducedInLanguage";
 import './StyledRouteMoviesProducedInLanguage.css'
+import FramerPageTitle from "../../components/framerMotion/FramerPageTitle";
+import FramerRoute from "../../components/framerMotion/FramerRoute.jsx";
 
 export default function RouteMoviesProducedInLanguage() {
     return (
-        <div className="RouteMoviesProducedInLanguage">
-            <h1> Movies from all genres per language</h1>
-            <ProducedInLanguage />
-        </div>
+        <FramerRoute 
+            name={"RouteMoviesProducedInLanguage"}
+            title={<FramerPageTitle title={"Movies from all genres per language"} />}
+            component={<ProducedInLanguage />}
+        />
     )
 }
