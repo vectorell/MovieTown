@@ -129,8 +129,8 @@ export function numberOfMoviesPerPremiere() {
 
 
 
-export const randomNumber = () => {
-    return Math.floor(Math.random() * (255 - 0 + 1) + 1);
+export const randomNumber = (min, max) => {
+    return Math.floor(Math.random() * (max + min) + min);
 };
 
 
@@ -138,7 +138,7 @@ export const randomNumber = () => {
 export function assignColor(type) {
     let colorArray = [];
     type.forEach((item) => {
-        colorArray.push(`rgba(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`);
+        colorArray.push(`rgba(${randomNumber(0, 255)}, ${randomNumber(0, 255)}, ${randomNumber(0, 255)})`);
     });
     return colorArray;
 }

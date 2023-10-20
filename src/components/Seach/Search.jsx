@@ -28,8 +28,21 @@ export default function Search() {
     return (
         <div className="Search">
             <div>
-                <p> ({ searchResults.length } results) </p>
-                <input type="text" ref={inputRef} onChange={handleChange} />
+                <motion.p
+                    initial={{ rotateX: 0 }}
+                    transition={{ delay: 0.3, duration: 1, ease: 'easeOut'}}
+                    animate={{ rotateX: 1080}}
+                > ({ searchResults.length } results) </motion.p>
+                
+                <motion.input 
+                type="text" 
+                ref={inputRef} 
+                onChange={handleChange} 
+                initial={{ background: '#ffffff'}}
+                transition={{ delay: 2, duration: 0.5}}
+                animate={{ background: ['#FFFFFF', '#aaaaaa', '#FFFFFF', '#aaaaaa', '#FFFFFF'] }}
+                
+                />
             </div>
 
                 {(searchResults.length > 1) ? 

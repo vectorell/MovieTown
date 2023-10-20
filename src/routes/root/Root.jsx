@@ -51,7 +51,7 @@ export default function Root() {
 
 
             <main>
-                <div className="content">
+                <div className="content" style={{ perspective: '50em' }}>
                     <Outlet />
 
                 </div>

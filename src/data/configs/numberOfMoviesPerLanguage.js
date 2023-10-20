@@ -9,8 +9,8 @@ export function getPieConfig(numberOfLanguages) {
                 data: numberOfMoviesPerLanguage(numberOfLanguages),
                 label: "Number of movies by languages",
                 backgroundColor: assignColor(numberOfMoviesPerLanguage(numberOfLanguages)),
-                borderWidth: 3,
-                borderColor: '#333',
+                borderWidth: 1,
+                borderColor: '#000',
             },
         ],
     };

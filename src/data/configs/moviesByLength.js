@@ -34,9 +34,9 @@ export default function getLineConfig() {
         datasets: [{
             data: runtimeCounts,
             label: 'Number of movies',
-            borderColor: "rgb(199, 143, 64)",
+            borderColor: '#3D405B',
             // pointRadius: 0.5,
-            backgroundColor: "rgba(75,192,192,0)",
+            backgroundColor: '#81B29A',
             lineTension: 0.5
         }]
     }

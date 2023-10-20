@@ -16,17 +16,17 @@ export function getConfig() {
             {
                 data: numberOfMoviesPerPremiere().perCategory[0], 
                 label: 'Documentaries',
-                backgroundColor: 'red'
+                backgroundColor: '#81B29A'
             },
             {
                 data: numberOfMoviesPerPremiere().perCategory[1], 
                 label: 'Specials',
-                backgroundColor: 'blue'
+                backgroundColor: '#E07A5F'
             },
             {
                 data: numberOfMoviesPerPremiere().perCategory[2], 
                 label: 'Feature films',
-                backgroundColor: 'green'
+                backgroundColor: '#3D405B'
             },
         
         ],
