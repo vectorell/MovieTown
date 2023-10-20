@@ -8,7 +8,7 @@ export default function RouteMoviesByPremiere() {
     return (
         <FramerRoute 
             name={"MoviesByPremiere"}
-            title={<FramerPageTitle title={"Number of movies by Premiere date"} />}
+            title={<FramerPageTitle title={"Movies by premiere date"} />}
             component={<MoviesByPremiere />}
         />
     )

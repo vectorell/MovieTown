@@ -36,7 +36,8 @@ export default function getLineConfig() {
             label: 'Number of movies',
             borderColor: "rgb(199, 143, 64)",
             // pointRadius: 0.5,
-            backgroundColor: "rgba(75,192,192,0)"
+            backgroundColor: "rgba(75,192,192,0)",
+            lineTension: 0.5
         }]
     }
 }

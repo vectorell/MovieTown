@@ -26,19 +26,19 @@ export default function Root() {
                 <nav className="router-nav">
 
                     <NavLink to="movies-by-genre"> 
-                        <FramerLinkP text={"Movies by genre"} />
+                        <FramerLinkP text={"Movies by Genre"} />
                     </NavLink>
 
                     <NavLink to="movies-by-length"> 
-                        <FramerLinkP text={"Movies by length"} />
+                        <FramerLinkP text={"Movies by Length"} />
                     </NavLink>
 
                     <NavLink to="movies-by-premiere"> 
-                        <FramerLinkP text={"Movies by premiere"} />
+                        <FramerLinkP text={"Movies by Premiere"} />
                     </NavLink>
 
                     <NavLink to="movies-by-produced-in-language"> 
-                        <FramerLinkP text={"Number of movies produced per language"} />
+                        <FramerLinkP text={"Movies per Language"} />
                     </NavLink>
 
                     <NavLink to="movies-by-search-string"> 
@@ -51,7 +51,10 @@ export default function Root() {
 
 
             <main>
-                <Outlet />
+                <div className="content">
+                    <Outlet />
+
+                </div>
                 {/* <RouteMoviesByPremiere /> */}
             </main>
         </div>

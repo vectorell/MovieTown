@@ -7,8 +7,9 @@ export default function RouteMoviesProducedInLanguage() {
     return (
         <FramerRoute 
             name={"RouteMoviesProducedInLanguage"}
-            title={<FramerPageTitle title={"Movies from all genres per language"} />}
+            title={<FramerPageTitle title={"Movies per language"} />}
             component={<ProducedInLanguage />}
+            style={{ display: 'flow' }}
         />
     )
 }

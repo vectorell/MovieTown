@@ -6,7 +6,7 @@ export default function RouteMoviesByLength() {
     return (
         <FramerRoute 
             name={"RouteMoviesByLength"}
-            title={<FramerPageTitle title={"Number of movies by length"} />}
+            title={<FramerPageTitle title={"Movies by length"} />}
             component={<MoviesByLength />}
         />
     )

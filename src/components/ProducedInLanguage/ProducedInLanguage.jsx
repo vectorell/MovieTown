@@ -26,12 +26,21 @@ export default function ProducedInLanguage() {
         setSelectedLanguages(selectedLanguages - 1 )
     }
 
+    const options = {
+      elements: {
+        arc: {
+          radius: 50
+        }
+      }
+
+    };
+
     return (
         <motion.div 
         className="ProducedInLanguage"
         >
            <h2>(showing top {selectedLanguages}): </h2>
-            <Pie data={pieConfig} />
+            <Pie data={pieConfig} options={options}/>
             <button
                 onClick={() => setCountDecrease()}
                     >
