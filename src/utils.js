@@ -27,15 +27,50 @@ export function allMovies() {
 
 
 // Hämta och för in språknamnen i en array
-export function getLanguageNames(max) {
-    let langArray = [];
+// export function getLanguageNames(max) {
+//     let langArray = [];
 
+//     allMovies().forEach((movie) => {
+//         !langArray.includes(movie.Language) &&
+//             langArray.push(movie.Language);
+//     });
+
+//     console.log('allMovies(): ', allMovies());
+//     console.log('langArray: ', langArray);
+
+//     console.log('langArray: ', langArray)
+//     return langArray.slice(0, max);
+// }
+
+
+// Hämta och för in språknamnen i en array
+export function getLanguageNames(max) {
+    const data = allMovies()
+    
+    let langArray= []
     allMovies().forEach((movie) => {
-        !langArray.includes(movie.Language) &&
-            langArray.push(movie.Language);
+        langArray.push(movie.Language);
     });
-    return langArray.slice(0, max);
+
+    // Räkna antalet filmer per språk
+    let languageCounts = {}
+    langArray.forEach(language => {
+        (languageCounts[language] = (languageCounts[language] || 0) + 1)
+    })
+
+    const objectArray = Object.entries(languageCounts).sort((a, b) => b[1] - a[1])
+
+    let arrayToReturn = []
+    objectArray.forEach(language => {
+        arrayToReturn.push(language[0]);
+    })
+
+    return arrayToReturn.slice(0, max)
 }
+
+
+
+
 
 
 // Hämta ut hur många filmer per språk det finns
@@ -47,8 +82,14 @@ export function numberOfMoviesPerLanguage(max) {
         results.push(filtered.length);
     });
 
+    // console.log('getLanguageNames(): ', getLanguageNames())
+
+    // console.log('results: ', results)
+
     let sortedResults = results.sort((a, b) => b - a);
     let pickedResults = sortedResults.slice(0, max);
+
+    // console.log('sortedResults: ', sortedResults);
     return pickedResults;
 }
 

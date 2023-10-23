@@ -1,6 +1,7 @@
 import { getLanguageNames, numberOfMoviesPerLanguage, assignColor } from "../../utils.js";
 
 export function getPieConfig(numberOfLanguages) {
+    // console.log(getLanguageNames(numberOfLanguages))
 
     return {
         labels: getLanguageNames(numberOfLanguages),

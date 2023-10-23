@@ -12,8 +12,8 @@ export default function FramerLinkP({text}) {
             repeat: Infinity,
             ease: 'easeInOut',
             duration: 0.5,
-            
-        }
+        },
+        color: '#999',
     }
 
     // const tapAnimation = {
@@ -26,6 +26,8 @@ export default function FramerLinkP({text}) {
     return (
         <motion.p
 
+        initial= {{ color: '#ffffff' }}
+
         whileHover={ hoverAnimation }
 
         transition={{ 
@@ -34,8 +36,10 @@ export default function FramerLinkP({text}) {
 
         whileTap={{ 
             scale: 0.95,
-            color: '#000',
+            // color: '#000',
         }}
+        
+
         // whileTap={ tapAnimation }
             >
             {text}
