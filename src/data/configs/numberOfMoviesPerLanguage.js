@@ -11,6 +11,7 @@ export function getPieConfig(numberOfLanguages) {
                 backgroundColor: assignColor(numberOfMoviesPerLanguage(numberOfLanguages)),
                 borderWidth: 1,
                 borderColor: '#000',
+                // radius: '90%',
             },
         ],
     };

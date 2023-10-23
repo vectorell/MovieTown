@@ -31,8 +31,8 @@ body::-webkit-scrollbar {
 .content {
     /* background-color: #000000d1; */
     border-radius: 1em;
-    width: 60%;
-    height: 50%;
+    width: 80%;
+    height: 90%;
     padding: 1em;
     display: flex;
     flex-direction: column;
