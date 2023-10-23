@@ -20,8 +20,9 @@ export default function MoviesByLength() {
     const options = {
         scales: {
             x: {
+                display: false,
                 title: {
-                    display: true,
+                    display: false,
                     text: 'Number of movies'
                 }
             },

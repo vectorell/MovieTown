@@ -47,8 +47,9 @@ export function allMovies() {
 export function getLanguageNames(max) {
     const data = allMovies()
     
+    // Hämta ut språken
     let langArray= []
-    allMovies().forEach((movie) => {
+    data.forEach((movie) => {
         langArray.push(movie.Language);
     });
 
@@ -58,6 +59,7 @@ export function getLanguageNames(max) {
         (languageCounts[language] = (languageCounts[language] || 0) + 1)
     })
 
+    // Gör om 
     const objectArray = Object.entries(languageCounts).sort((a, b) => b[1] - a[1])
 
     let arrayToReturn = []

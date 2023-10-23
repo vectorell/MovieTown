@@ -29,15 +29,21 @@ export default function getLineConfig() {
     let movieCounts = uniqueRuntimes.map(runtime => runtimeCounts[runtime])
     // console.log('movieCounts: ', movieCounts)
 
+    function titleToHoverLabel() {
+
+    }
+    console.log(eachRuntime);
+
     return {
-        labels: movieCounts,
+        labels: allMovies().map( movie => movie.Title),
         datasets: [{
-            data: uniqueRuntimes,
+            data: eachRuntime.sort((a,b) => a - b),
             label: 'Minutes',
             borderColor: '#3D405B',
             // pointRadius: 0.5,
             backgroundColor: '#81B29A',
-            lineTension: 0.5
+            lineTension: 0.5,
+            
         }]
     }
 }
