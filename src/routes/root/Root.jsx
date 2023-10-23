@@ -25,6 +25,10 @@ export default function Root() {
             <header>  
                 <nav className="router-nav">
 
+                    <NavLink to="start"> 
+                        <FramerLinkP text={"Start"} />
+                    </NavLink>
+
                     <NavLink to="movies-by-genre"> 
                         <FramerLinkP text={"Movies by Genre"} />
                     </NavLink>
@@ -51,10 +55,16 @@ export default function Root() {
 
 
             <main>
-                <div className="content" style={{ perspective: '50em' }}>
-                    <Outlet />
+                <motion.div className="content"
+                style={{
+                    perspective: 900,
+                    transformStyle: "preserve-3d"
 
-                </div>
+                }}
+                >
+                    <Outlet/>
+
+                </motion.div>
                 {/* <RouteMoviesByPremiere /> */}
             </main>
         </div>

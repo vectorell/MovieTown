@@ -9,12 +9,17 @@ import RouteMoviesByLength from './routes/RouteMoviesByLength/RouteMoviesByLengt
 import RouteMoviesByPremiere from './routes/RouteMoviesByPremiere/RouteMoviesByPremiere.jsx';
 import RouteMoviesProducedInLanguage from './routes/RouteMoviesProducedInLanguage/RouteMoviesProducedInLanguage.jsx';
 import RouteMoviesBySearchString from './routes/RouteMoviesBySearchString/RouteMoviesBySearchString.jsx';
+import RouteLandingPage from './routes/RouteLandingPage/RouteLandingPage.jsx';
 
 const router = createHashRouter([
   {
     path: "",
     element: <Root />,
     children: [
+      {
+        path: "start",
+        element: <RouteLandingPage />
+      },
       {
         path: "movies-by-genre",
         element: <RouteMoviesByGenre />
