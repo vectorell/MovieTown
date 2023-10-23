@@ -27,21 +27,17 @@ export default function getLineConfig() {
 
     // Skapa en array för antalet filmer per visningslängd
     let movieCounts = uniqueRuntimes.map(runtime => runtimeCounts[runtime])
-    // console.log('movieCounts: ', movieCounts)
 
-    function titleToHoverLabel() {
-
-    }
-    console.log(eachRuntime);
 
     return {
-        labels: allMovies().map( movie => movie.Title),
+        labels: allMovies().map( movie => 'Movie: ' + movie.Title),
         datasets: [{
             data: eachRuntime.sort((a,b) => a - b),
-            label: 'Minutes',
-            borderColor: '#3D405B',
+            label: 'Runtime (minutes)',
+            borderColor: '#81B29A',
+            borderWidth: 0.3,
             // pointRadius: 0.5,
-            backgroundColor: '#81B29A',
+            backgroundColor: '#3D405B',
             lineTension: 0.5,
             
         }]

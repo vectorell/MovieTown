@@ -29,7 +29,7 @@ export function getPieConfig() {
         datasets: [
             {
                 data: movieCounts,
-                label: "Number of movies by genre",
+                label: "Number of movies",
                 backgroundColor: assignColor(movieCounts),
             },
         ],

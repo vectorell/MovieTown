@@ -39,7 +39,11 @@ export default function ProducedInLanguage() {
         <motion.div 
         className="ProducedInLanguage"
         >
-           <h2>(showing top {selectedLanguages}): </h2>
+          {selectedLanguages === 21 ? (
+            <h2>(showing all languages): </h2>
+          ): (
+            <h2>(showing top {selectedLanguages}): </h2>
+          )}
             <Pie data={pieConfig} options={options}/>
             <button
                 onClick={() => setCountDecrease()}
