@@ -30,10 +30,10 @@ export default function getLineConfig() {
     // console.log('movieCounts: ', movieCounts)
 
     return {
-        labels: [],
+        labels: movieCounts,
         datasets: [{
-            data: runtimeCounts,
-            label: 'Number of movies',
+            data: uniqueRuntimes,
+            label: 'Minutes',
             borderColor: '#3D405B',
             // pointRadius: 0.5,
             backgroundColor: '#81B29A',

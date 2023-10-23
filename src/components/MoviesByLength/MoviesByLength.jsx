@@ -22,14 +22,14 @@ export default function MoviesByLength() {
             x: {
                 title: {
                     display: true,
-                    text: 'Minutes'
+                    text: 'Number of movies'
                 }
             },
             y: {
                 beginAtZero: true,
                 title: {
                     display: true,
-                    text: 'Number of movies'
+                    text: 'Minutes'
                 }
             }
         }
