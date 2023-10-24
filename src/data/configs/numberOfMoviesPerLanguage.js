@@ -1,8 +1,6 @@
-import { getLanguageNames, numberOfMoviesPerLanguage, assignColor } from "../../utils.js";
-import { colorArray } from "../../utils.js";
+import { getLanguageNames, numberOfMoviesPerLanguage, assignColor, colorArray } from "../../utils.js";
 
 export function getPieConfig(numberOfLanguages) {
-    // console.log(getLanguageNames(numberOfLanguages))
 
     return {
         labels: getLanguageNames(numberOfLanguages),
@@ -13,7 +11,6 @@ export function getPieConfig(numberOfLanguages) {
                 backgroundColor: colorArray,
                 borderWidth: 1,
                 borderColor: '#000',
-                // radius: '90%',
             },
         ],
     };

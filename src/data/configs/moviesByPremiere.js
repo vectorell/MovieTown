@@ -6,9 +6,6 @@ export function getConfig() {
     // TODO: Refaktorera. Få väck hårdkodning
 
     const data = numberOfMoviesPerPremiere()
-    // console.log('data: ', data)
-
-    // TODO: Lägg till bättre färger i backgroundColor...
     
     return {
         labels: numberOfMoviesPerPremiere().months,

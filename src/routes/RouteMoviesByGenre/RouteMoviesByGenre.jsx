@@ -4,7 +4,6 @@ import FramerRoute from "../../components/framerMotion/FramerRoute.jsx";
 
 export default function RouteMoviesByGenre() {
     return (
-
         <FramerRoute 
             name={"RouteMoviesByGenre"}
             title={<FramerPageTitle title={"Movies by genre"} />}

@@ -50,8 +50,6 @@ export default function Search() {
                         <motion.div 
                         key={index} 
                         className="search-results"
-                            // initial={{ scale: 0 }}
-                            // animate={{ scale: 1 }}
                             >
                             <p> {result.Title} </p>
                         </motion.div>
