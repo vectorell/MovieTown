@@ -20,9 +20,7 @@ export default function MoviesByLength() {
     const options = {
         plugins: {
             legend: {
-                labels: {
-                    color: 'white',
-                }
+                display: false,
             }
         },
         scales: {

@@ -17,7 +17,7 @@ export default function FramerRoute({ name, title, component }) {
             transition={{ duration: 0.8, ease: easeInOut, type: 'spring', stiffness: 300 }}
             animate={{ rotateY: 0, rotateX: 0, rotateZ: 0 }}
             exit={{ rotateY: 100, duration: 2 }}
-            style={{ backgroundColor: '#000000e0', border: '1px solid #555', padding: '1em', borderRadius: '1em' }}
+            style={{ background: 'linear-gradient( to bottom left, #404040df, #000000)', padding: '1em', borderRadius: '3em' }}
 
             
             >

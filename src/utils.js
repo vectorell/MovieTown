@@ -2,25 +2,12 @@ import documentaries from './data/documentaries.json';
 import featureFilms from './data/feature-films.json';
 import specials from './data/specials.json';
 
-export function logData() {
-    console.log(JSON.stringify(documentaries));
-    console.log(documentaries[1]);
-}
-
-// TODO: Simplifiera
 export function allMovies() {
-    const genres = [documentaries, featureFilms, specials];
     let allMovies = [];
 
-    documentaries.forEach(documentary => {
-        allMovies.push(documentary)
-    });
-    featureFilms.forEach(featureFilm => {
-        allMovies.push(featureFilm)
-    });
-    specials.forEach(special => {
-        allMovies.push(special)
-    });
+    documentaries.forEach(documentary => allMovies.push(documentary));
+    featureFilms.forEach(featureFilm => allMovies.push(featureFilm));
+    specials.forEach(special => allMovies.push(special));
 
     return allMovies
 }
@@ -30,7 +17,7 @@ export function getLanguageNames(max) {
     const data = allMovies()
     
     // Hämta ut språken
-    let langArray= []
+    let langArray=[]
     data.forEach((movie) => {
         langArray.push(movie.Language);
     });
@@ -100,7 +87,7 @@ export function numberOfMoviesPerPremiere() {
 }
 
 
-
+// Funktion för slumpmässiga nummer till diverse configs och komponenter.
 export const randomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min);
 };
