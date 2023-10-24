@@ -25,6 +25,10 @@ export default function Root() {
             <header>  
                 <nav className="router-nav">
 
+                    <NavLink to="start"> 
+                        <FramerLinkP text={"Start"} />
+                    </NavLink>
+
                     <NavLink to="movies-by-genre"> 
                         <FramerLinkP text={"Movies by Genre"} />
                     </NavLink>
