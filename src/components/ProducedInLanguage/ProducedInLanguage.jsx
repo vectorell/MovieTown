@@ -38,6 +38,11 @@ export default function ProducedInLanguage() {
     return (
         <motion.div 
         className="ProducedInLanguage"
+        style={{ 
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
         >
           {selectedLanguages === 21 ? (
             <h2>(showing all languages): </h2>
@@ -45,18 +50,22 @@ export default function ProducedInLanguage() {
             <h2>(showing top {selectedLanguages}): </h2>
           )}
             <Pie data={pieConfig} options={options}/>
-            <button
-                onClick={() => setCountDecrease()}
-                    >
-                    {" "}
-                    Less languages{" "}
-                </button>
-                <button
-                  onClick={() => setCountIncrease()}
-                >
-                    {" "}
-                    More languages{" "}
-                </button>
+
+            <div>
+              <button
+                  onClick={() => setCountDecrease()}
+                      >
+                      {" "}
+                      Less languages{" "}
+                  </button>
+                  <button
+                    onClick={() => setCountIncrease()}
+                  >
+                      {" "}
+                      More languages{" "}
+                  </button>
+
+            </div>
         </motion.div>
     )
 }
