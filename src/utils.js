@@ -41,7 +41,6 @@ export function getLanguageNames(max) {
         (languageCounts[language] = (languageCounts[language] || 0) + 1)
     })
 
-    // Gör om 
     const objectArray = Object.entries(languageCounts).sort((a, b) => b[1] - a[1])
 
     let arrayToReturn = []

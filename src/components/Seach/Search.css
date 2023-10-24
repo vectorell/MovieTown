@@ -16,10 +16,12 @@
 .Search .detailed-view {
     box-shadow: 1px 6px 10px 2px black;
     margin: 1em;
-    background: linear-gradient(rgb(243, 194, 87), rgb(125, 75, 10)) ;
-    color: rgb(0, 0, 0);
+    background: linear-gradient(to left bottom, rgb(69, 69, 69) 10%, rgb(0, 0, 0)) ;
+    color: rgb(208, 94, 94);
     min-height: fit-content;
-    width: fit-content
+    width: fit-content;
+    padding: 1em;
+    border-radius: 0.5em;
 }
 .Search .detailed-view > * {
     padding: 0.5em;

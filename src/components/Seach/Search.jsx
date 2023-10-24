@@ -62,10 +62,23 @@ export default function Search() {
                         animate={{ scale: 1 }}
                         >
                             <h1> {result.Title} </h1>
-                            <h2> Premiere: {result.Premiere} </h2>
-                            <h3> Genre: {result.Genre ? result.Genre : 'Documentary'} </h3>
-                            <p> Runtime: {result.Runtime} </p>
-                            <p> Language: {result.Language} </p>
+                            <div>
+                                <h2> Premiere: </h2>
+                                <p> {result.Premiere} </p>
+                            </div>
+                            <div>
+                                <h2> Genre: </h2>
+                                <p> {result.Genre ? result.Genre : 'Documentary'} </p>
+                            </div>
+                            <div>
+                                <h2> Runtime: </h2>
+                                <p>{result.Runtime}</p>
+                            </div>
+                            <div>
+                                <h2> Language: </h2>
+                                <p>{result.Language}</p>
+                            </div>
+
                         </motion.div>
                     ))
 
