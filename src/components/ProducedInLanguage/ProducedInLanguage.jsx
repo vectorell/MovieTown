@@ -27,6 +27,13 @@ export default function ProducedInLanguage() {
     }
 
     const options = {
+      plugins: {
+        legend: {
+          labels: {
+            color: 'white'
+          }
+        }
+      },
       elements: {
         arc: {
           radius: 50

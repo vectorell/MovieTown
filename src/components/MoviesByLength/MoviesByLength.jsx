@@ -18,17 +18,32 @@ const lineConfig = getLineConfig()
 export default function MoviesByLength() {
 
     const options = {
+        plugins: {
+            legend: {
+                labels: {
+                    color: 'white'
+                }
+            }
+        },
         scales: {
             x: {
+                ticks: {
+                    color: 'white'
+                },
                 display: false,
                 title: {
+                    color: 'white',
                     display: false,
                     text: 'Number of movies'
                 }
             },
             y: {
                 beginAtZero: true,
+                ticks: {
+                    color: 'white'
+                },
                 title: {
+                    color: 'white',
                     display: true,
                     text: 'Minutes'
                 }

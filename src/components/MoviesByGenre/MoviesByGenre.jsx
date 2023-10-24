@@ -12,16 +12,29 @@ const pieConfig = getPieConfig()
 export default function MoviesByGenre() {
 
     const options = {
+        plugins: {
+            legend: {
+                display: false,
+            }
+        },
         scales: {
             x: {
+                ticks: {
+                    color: 'white'
+                },
                 title: {
                     display: true,
-                    text: 'Genres'
+                    text: 'Genres',
+                    color: 'white'
                 }
             },
             y: {
+                ticks: {
+                    color: 'white'
+                },
                 beginAtZero: true,
                 title: {
+                    color: 'white',
                     display: true,
                     text: 'Number of movies'
                 }

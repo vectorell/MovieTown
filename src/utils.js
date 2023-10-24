@@ -153,25 +153,6 @@ export function numberOfMoviesPerPremiere() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export const randomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min);
 };
@@ -183,6 +164,7 @@ export function assignColor(type) {
     type.forEach((item) => {
         colorArray.push(`rgba(${randomNumber(0, 255)}, ${randomNumber(0, 255)}, ${randomNumber(0, 255)})`);
     });
+    console.log(colorArray);
     return colorArray;
 }
 
@@ -207,3 +189,27 @@ export function convertRuntimeToMinutes(runtime) {
         return hoursToMinutes + minutes
     }
 }
+
+export let colorArray = [
+    "rgba(199, 13, 45)",
+    "rgba(250, 51, 20)",
+    "rgba(7, 14, 217)",
+    "rgba(43, 174, 6)",
+    "rgba(56, 201, 115)",
+    "rgba(178, 232, 180)",
+    "rgba(217, 138, 181)",
+    "rgba(179, 158, 78)",
+    "rgba(154, 82, 233)",
+    "rgba(140, 197, 114)",
+    "rgba(64, 55, 6)",
+    "rgba(44, 68, 19)",
+    "rgba(188, 128, 222)",
+    "rgba(107, 62, 164)",
+    "rgba(150, 173, 104)",
+    "rgba(146, 73, 218)",
+    "rgba(13, 253, 242)",
+    "rgba(166, 54, 141)",
+    "rgba(59, 7, 217)",
+    "rgba(245, 64, 219)",
+    "rgba(186, 65, 162)"
+  ]
