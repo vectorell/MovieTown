@@ -21,7 +21,7 @@ export default function MoviesByLength() {
         plugins: {
             legend: {
                 labels: {
-                    color: 'white'
+                    color: 'white',
                 }
             }
         },
@@ -45,7 +45,7 @@ export default function MoviesByLength() {
                 title: {
                     color: 'white',
                     display: true,
-                    text: 'Minutes'
+                    text: 'Minutes',
                 }
             }
         }

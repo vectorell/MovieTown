@@ -25,7 +25,7 @@ export default function MoviesByGenre() {
                 title: {
                     display: true,
                     text: 'Genres',
-                    color: 'white'
+                    color: 'white',
                 }
             },
             y: {

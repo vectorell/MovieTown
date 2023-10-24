@@ -30,10 +30,6 @@ export default function LandingPage() {
                 rotateY 
             }}
             />
-
-            <h1> ... presents CHARTS </h1>
-            <h2> Charts everywhere! </h2>
-            <h4> It's insane! </h4>
         </motion.div>
     )
 }
