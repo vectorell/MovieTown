@@ -32,7 +32,7 @@ export default function getLineConfig() {
             label: 'Runtime (minutes)',
             borderColor: '#81B29A',
             borderWidth: 0.3,
-            backgroundColor: '#3D405B',
+            backgroundColor: '#E07A5F',
             lineTension: 0.5,
             
         }]

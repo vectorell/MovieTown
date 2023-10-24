@@ -9,6 +9,8 @@
     margin-bottom: 1em;
     flex-basis: auto;
     flex-wrap: wrap;
+    font-size: 1.4em;
+    font-weight: 600;
 
     & a {
         text-decoration: none;

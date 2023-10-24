@@ -47,7 +47,7 @@ export default function Search() {
 
                 {(searchResults.length > 1) ? 
                     searchResults.map( (result, index) => (
-                        <motion.div 
+                        <motion.div
                         key={index} 
                         className="search-results"
                             >
