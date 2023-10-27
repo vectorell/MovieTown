@@ -1,4 +1,4 @@
-# MovieTown (in progress)
+# MovieTown
 ## A project I was tasked with by my school Folkuniversitetet Karlstad.
 
 ### Project description (in Swedish):
